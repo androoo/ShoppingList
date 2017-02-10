@@ -104,9 +104,9 @@
 		5ABEE07F1E4E1B3300A5D595 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5ABEE0831E4E1B7400A5D595 /* ShoppingList.xcdatamodeld */,
 				5ABEE08A1E4E1CDD00A5D595 /* Stack.swift */,
 				5ABEE08C1E4E1CFD00A5D595 /* Item + Convenience.swift */,
+				5ABEE0831E4E1B7400A5D595 /* ShoppingList.xcdatamodeld */,
 			);
 			name = Model;
 			sourceTree = "<group>";
