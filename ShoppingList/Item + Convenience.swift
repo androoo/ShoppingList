@@ -9,7 +9,6 @@
 import Foundation
 import CoreData
 
-
 extension Item {
     @discardableResult convenience init(name: String, hasPurchased: Bool = false, context: NSManagedObjectContext = CoreDataStack.context) {
         self.init(context: context)

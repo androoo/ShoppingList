@@ -8,19 +8,19 @@
 
 import UIKit
 
+//MARK: - Protocol
 protocol ShoppingItemButtonTableViewCellDelegate: class {
     func itemCellButtonTapped(_ sender: ItemTableViewCell)
 }
 
+//MARK: - ItemTableViewCell
 class ItemTableViewCell: UITableViewCell {
-    
-    
+
     //MARK: - Outlets
-    
     
     @IBOutlet weak var itemNamelabel: UILabel!
     @IBOutlet weak var hasPurchasedButton: UIButton!
-    
+  
     
     //MARK: - Properties
     
@@ -30,15 +30,14 @@ class ItemTableViewCell: UITableViewCell {
         }
     }
     
+    //delegate?
     weak var delegate: ShoppingItemButtonTableViewCellDelegate?
     
     
     //MARK: - UI Actions
     
     @IBAction func hasPurchasedButtonTapped(_ sender: UIButton) {
-        
         delegate?.itemCellButtonTapped(self)
-        
     }
     
     

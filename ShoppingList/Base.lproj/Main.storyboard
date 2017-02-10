@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Title-->
+        <!--Shopping List Table View Controller-->
         <scene sceneID="YcB-iO-Hfd">
             <objects>
                 <tableViewController modalPresentationStyle="pageSheet" id="aSI-BA-ptd" customClass="ShoppingListTableViewController" customModule="ShoppingList" customModuleProvider="target" sceneMemberID="viewController">
@@ -27,7 +27,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ViJ-fi-lo5">
-                                            <rect key="frame" x="16" y="11" width="22" height="22"/>
+                                            <rect key="frame" x="21" y="11" width="22" height="22"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="22" id="Mxb-ws-K0G"/>
                                                 <constraint firstAttribute="width" secondItem="ViJ-fi-lo5" secondAttribute="height" multiplier="1:1" id="S8m-ti-tjg"/>
@@ -38,7 +38,7 @@
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUv-bl-lyN">
-                                            <rect key="frame" x="54" y="11" width="87" height="22"/>
+                                            <rect key="frame" x="51" y="11" width="87" height="22"/>
                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -46,8 +46,8 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="EUv-bl-lyN" firstAttribute="centerY" secondItem="ICz-km-QmP" secondAttribute="centerY" id="Olc-Oa-gkF"/>
-                                        <constraint firstItem="ViJ-fi-lo5" firstAttribute="leading" secondItem="ICz-km-QmP" secondAttribute="leading" constant="16" id="YJC-J2-ACr"/>
-                                        <constraint firstItem="EUv-bl-lyN" firstAttribute="leading" secondItem="ViJ-fi-lo5" secondAttribute="trailing" constant="16" id="o3u-lT-vKF"/>
+                                        <constraint firstItem="ViJ-fi-lo5" firstAttribute="leading" secondItem="ICz-km-QmP" secondAttribute="leading" constant="21" id="YJC-J2-ACr"/>
+                                        <constraint firstItem="EUv-bl-lyN" firstAttribute="leading" secondItem="ViJ-fi-lo5" secondAttribute="trailing" constant="8" id="o3u-lT-vKF"/>
                                         <constraint firstItem="ViJ-fi-lo5" firstAttribute="centerY" secondItem="ICz-km-QmP" secondAttribute="centerY" id="wG7-HU-p4d"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -62,7 +62,7 @@
                             <outlet property="delegate" destination="aSI-BA-ptd" id="OPZ-bq-tdA"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="GO0-jt-iGZ">
+                    <navigationItem key="navigationItem" id="GO0-jt-iGZ">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="nrM-kB-Dt2">
                             <connections>
                                 <action selector="addButtonTapped:" destination="aSI-BA-ptd" id="hAV-Xh-PM2"/>
@@ -72,16 +72,20 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xH6-qv-PWw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="991.20000000000005" y="-172.26386806596702"/>
+            <point key="canvasLocation" x="914" y="-172"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uJR-Bo-eIt">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ugK-Ni-dkW" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LLq-1g-dPZ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="LLq-1g-dPZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

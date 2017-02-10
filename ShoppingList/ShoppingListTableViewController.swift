@@ -14,7 +14,7 @@ class ShoppingListTableViewController: UITableViewController, ShoppingItemButton
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Shopping List"
+//        title = "Shopping List"
         customUI()
     }
     
@@ -22,29 +22,30 @@ class ShoppingListTableViewController: UITableViewController, ShoppingItemButton
     
     @IBAction func addButtonTapped(_ sender: UIBarButtonItem) {
     
-        var itemTitleTextField: UITextField?
+        //Add item AlertController
         
         let alertController = UIAlertController(title: "Add item", message: "add an item to you shopping list", preferredStyle: .alert)
         
+        var itemTitleTextField: UITextField?
         alertController.addTextField { (textField) in
             itemTitleTextField = textField
         }
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        
         let addAction = UIAlertAction(title: "Add", style: .default) { (_) in
             
             guard let name = itemTitleTextField?.text else { return }
             ItemController.shared.addItemNamed(name: name)
             self.tableView.reloadData()
         }
+        
         alertController.addAction(addAction)
         alertController.addAction(cancelAction)
         self.present(alertController, animated: true, completion: nil)
     }
     
 
-    // MARK: - Table view data source
+    // MARK: - TableView datasource
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return ItemController.shared.items.count
@@ -85,6 +86,16 @@ class ShoppingListTableViewController: UITableViewController, ShoppingItemButton
         navigationController?.navigationBar.titleTextAttributes =
             [NSForegroundColorAttributeName: UIColor.primaryText]
 
+        let leftItem = UIBarButtonItem(title: "Shopping List",
+                                       style: .plain,
+                                       target: nil,
+                                       action: nil)
+        
+        leftItem.isEnabled = false 
+        self.navigationItem.leftBarButtonItem = leftItem
+        navigationItem.leftBarButtonItem?.tintColor = UIColor.primaryText
+        
+        
     }
     
     

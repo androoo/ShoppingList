@@ -15,6 +15,7 @@ class ItemController {
     
     //computed item property that checks persistent data everytime property is hit
     var items: [Item] {
+        //get request
         let request: NSFetchRequest<Item> = Item.fetchRequest()
         return (try? CoreDataStack.context.fetch(request)) ?? []
     }
@@ -27,8 +28,7 @@ class ItemController {
     }
     
     func delete(item: Item) {
-        let moc = CoreDataStack.context
-        moc.delete(item)
+        CoreDataStack.context.delete(item)
         saveToPersistentStore()
     }
     
@@ -41,9 +41,8 @@ class ItemController {
     //MARK: - Data persistence
     
     func saveToPersistentStore() {
-        let moc = CoreDataStack.context
         do {
-            try moc.save()
+            try CoreDataStack.context.save()
         } catch let error {
             print("There was a problemo saving: \(error)")
         }
