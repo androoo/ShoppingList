@@ -10,6 +10,14 @@ import UIKit
 
 class ShoppingListTableViewController: UITableViewController, ShoppingItemButtonTableViewCellDelegate {
     
+    //MARK: - View Life Cycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = "Shopping List"
+        customUI()
+    }
+    
     //MARK: - UI Actions 
     
     @IBAction func addButtonTapped(_ sender: UIBarButtonItem) {
@@ -42,6 +50,10 @@ class ShoppingListTableViewController: UITableViewController, ShoppingItemButton
         return ItemController.shared.items.count
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 55
+    }
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "itemCell", for: indexPath) as? ItemTableViewCell else { return ItemTableViewCell()}
@@ -49,6 +61,7 @@ class ShoppingListTableViewController: UITableViewController, ShoppingItemButton
         let item = ItemController.shared.items[indexPath.row]
         cell.delegate = self
         cell.item = item
+        cell.itemNamelabel.textColor = .secondaryText
         return cell
     }
     
@@ -61,6 +74,17 @@ class ShoppingListTableViewController: UITableViewController, ShoppingItemButton
             tableView.deleteRows(at: [indexPath], with: .fade)
             
         }
+    }
+    
+    //MARK: - Helpers
+    
+    func customUI() {
+        view.backgroundColor = .backgroundColor
+        navigationController?.navigationBar.barTintColor = .white
+        navigationController?.navigationBar.tintColor = .auxPurple
+        navigationController?.navigationBar.titleTextAttributes =
+            [NSForegroundColorAttributeName: UIColor.primaryText]
+
     }
     
     
