@@ -14,7 +14,7 @@ class ItemController {
     static let shared = ItemController()
     
     //computed item property that checks persistent data everytime property is hit
-    var item: [Item] {
+    var items: [Item] {
         let request: NSFetchRequest<Item> = Item.fetchRequest()
         return (try? CoreDataStack.context.fetch(request)) ?? []
     }

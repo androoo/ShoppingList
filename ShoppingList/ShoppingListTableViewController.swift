@@ -10,17 +10,29 @@ import UIKit
 
 class ShoppingListTableViewController: UITableViewController {
     
+    //MARK: - Outlets
+    
+    
+    //MARK: - Properties 
+    
+    
+    //MARK: - UI Actions 
+    
+    @IBAction func addButtonTapped(_ sender: UIBarButtonItem) {
+        
+    }
+    
     
 
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return ItemController.shared.items.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-        
+        //dont forget delegate here
         return cell
     }
     
@@ -29,6 +41,8 @@ class ShoppingListTableViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
+    
+    //MARK: - TableViewCellDelegate
     
     
     // MARK: - Navigation

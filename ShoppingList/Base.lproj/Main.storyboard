@@ -33,6 +33,9 @@
                                                 <constraint firstAttribute="width" secondItem="ViJ-fi-lo5" secondAttribute="height" multiplier="1:1" id="S8m-ti-tjg"/>
                                             </constraints>
                                             <state key="normal" image="incomplete"/>
+                                            <connections>
+                                                <action selector="hasPurchasedButtonTapped:" destination="7em-wO-fn6" eventType="touchUpInside" id="OfG-y8-BBl"/>
+                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUv-bl-lyN">
                                             <rect key="frame" x="46" y="11" width="87" height="21"/>
@@ -48,6 +51,10 @@
                                         <constraint firstItem="ViJ-fi-lo5" firstAttribute="centerY" secondItem="ICz-km-QmP" secondAttribute="centerY" id="wG7-HU-p4d"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="hasPurchasedButton" destination="ViJ-fi-lo5" id="qGp-6c-hr2"/>
+                                    <outlet property="itemNamelabel" destination="EUv-bl-lyN" id="OXu-mh-Wes"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -56,7 +63,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Title" id="GO0-jt-iGZ">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="nrM-kB-Dt2"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="nrM-kB-Dt2">
+                            <connections>
+                                <action selector="addButtonTapped:" destination="aSI-BA-ptd" id="hAV-Xh-PM2"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xH6-qv-PWw" userLabel="First Responder" sceneMemberID="firstResponder"/>
