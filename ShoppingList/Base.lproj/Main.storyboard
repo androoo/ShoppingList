@@ -13,7 +13,7 @@
         <!--Title-->
         <scene sceneID="YcB-iO-Hfd">
             <objects>
-                <tableViewController id="aSI-BA-ptd" customClass="ShoppingListTableViewController" customModule="ShoppingList" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController modalPresentationStyle="pageSheet" id="aSI-BA-ptd" customClass="ShoppingListTableViewController" customModule="ShoppingList" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6rl-V3-GYF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,7 +27,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ViJ-fi-lo5">
-                                            <rect key="frame" x="8" y="11" width="22" height="22"/>
+                                            <rect key="frame" x="16" y="11" width="22" height="22"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="22" id="Mxb-ws-K0G"/>
                                                 <constraint firstAttribute="width" secondItem="ViJ-fi-lo5" secondAttribute="height" multiplier="1:1" id="S8m-ti-tjg"/>
@@ -38,7 +38,7 @@
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUv-bl-lyN">
-                                            <rect key="frame" x="46" y="11" width="87" height="21"/>
+                                            <rect key="frame" x="54" y="11" width="87" height="22"/>
                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -46,7 +46,7 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="EUv-bl-lyN" firstAttribute="centerY" secondItem="ICz-km-QmP" secondAttribute="centerY" id="Olc-Oa-gkF"/>
-                                        <constraint firstItem="ViJ-fi-lo5" firstAttribute="leading" secondItem="ICz-km-QmP" secondAttribute="leading" constant="8" id="YJC-J2-ACr"/>
+                                        <constraint firstItem="ViJ-fi-lo5" firstAttribute="leading" secondItem="ICz-km-QmP" secondAttribute="leading" constant="16" id="YJC-J2-ACr"/>
                                         <constraint firstItem="EUv-bl-lyN" firstAttribute="leading" secondItem="ViJ-fi-lo5" secondAttribute="trailing" constant="16" id="o3u-lT-vKF"/>
                                         <constraint firstItem="ViJ-fi-lo5" firstAttribute="centerY" secondItem="ICz-km-QmP" secondAttribute="centerY" id="wG7-HU-p4d"/>
                                     </constraints>
@@ -94,6 +94,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="incomplete" width="512" height="512"/>
+        <image name="incomplete" width="24" height="24"/>
     </resources>
 </document>

@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol ButtonTableViewCellDelegate: class {
+protocol ShoppingItemButtonTableViewCellDelegate: class {
     func itemCellButtonTapped(_ sender: ItemTableViewCell)
 }
 
@@ -30,7 +30,7 @@ class ItemTableViewCell: UITableViewCell {
         }
     }
     
-    weak var delegate: ButtonTableViewCellDelegate?
+    weak var delegate: ShoppingItemButtonTableViewCellDelegate?
     
     
     //MARK: - UI Actions

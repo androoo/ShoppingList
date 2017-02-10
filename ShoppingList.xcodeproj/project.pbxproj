@@ -17,6 +17,7 @@
 		5ABEE08B1E4E1CDD00A5D595 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABEE08A1E4E1CDD00A5D595 /* Stack.swift */; };
 		5ABEE08D1E4E1CFD00A5D595 /* Item + Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABEE08C1E4E1CFD00A5D595 /* Item + Convenience.swift */; };
 		5ABEE08F1E4E1D1000A5D595 /* ItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABEE08E1E4E1D1000A5D595 /* ItemController.swift */; };
+		5ABEE0911E4E2F4600A5D595 /* Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABEE0901E4E2F4600A5D595 /* Design.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		5ABEE08A1E4E1CDD00A5D595 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		5ABEE08C1E4E1CFD00A5D595 /* Item + Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Item + Convenience.swift"; sourceTree = "<group>"; };
 		5ABEE08E1E4E1D1000A5D595 /* ItemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemController.swift; sourceTree = "<group>"; };
+		5ABEE0901E4E2F4600A5D595 /* Design.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Design.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 		5ABEE0821E4E1B4500A5D595 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				5ABEE0901E4E2F4600A5D595 /* Design.swift */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5ABEE08F1E4E1D1000A5D595 /* ItemController.swift in Sources */,
+				5ABEE0911E4E2F4600A5D595 /* Design.swift in Sources */,
 				5ABEE0891E4E1CBC00A5D595 /* ItemTableViewCell.swift in Sources */,
 				5ABEE08B1E4E1CDD00A5D595 /* Stack.swift in Sources */,
 				5ABEE06B1E4E1B0600A5D595 /* AppDelegate.swift in Sources */,
